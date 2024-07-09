@@ -1468,9 +1468,33 @@ color: #000000;
     margin-bottom: 50px;
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .signup-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .signup-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-container {
+        width: 95%;
+    }
+}
 
 
-/* ... (other existing styles remain the same) */
+
 
 /* Preserve existing styles */
 .signup-container h2 {
