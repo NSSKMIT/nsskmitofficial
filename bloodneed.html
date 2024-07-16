@@ -56,7 +56,7 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-5">
+        <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKkFdJ9NbPI1XRedecNjYGhvMhZJDaPgPfw&s" alt="Logo">
                   <h1 class="text-primary m-0">NSS KMIT <i class=""></i></h1>
@@ -67,14 +67,14 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link ">Home</a>
-                        <a href="about.html" class="nav-item nav-link ">About</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Blood Community</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blood Community</a>
                             <div class="dropdown-menu m-0">
                                 <a href="donor.html" class="dropdown-item">Blood Donor</a>
-                                <a href="bloodneed.html" class="dropdown-item active">Need of Blood</a>
+                                <a href="bloodneed.html" class="dropdown-item">Need of Blood ?</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
@@ -83,6 +83,21 @@
                 </div>
             </nav>
         </div>
+        <!-- Navbar End -->
+
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Need of Blood ?</h1>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">Need of Blood ?</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
         <!-- Signup container -->
         <div class="signup-container col-12 mx-auto">
             <h2>Recipient Form</h2>
@@ -147,107 +162,6 @@
             <!-- Donor information will be displayed here -->
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function submitForm() {
-                // Get form data
-                const name = document.getElementById('name').value;
-                const gender = document.getElementById('gender').value;
-                const bloodGroup = document.getElementById('blood-group').value;
-                const packets = document.getElementById('packets').value;
-                const hospital = document.getElementById('hospital').value;
-                const fromKmit = document.getElementById('from-kmit').value;
-                const phone = document.getElementById('phone').value;
-                const phoneVerification = document.getElementById('phone-verification').value;
-    
-                // Validate phone number and phone verification
-                if (phone !== phoneVerification) {
-                    alert('Phone number and phone verification do not match. Please check and try again.');
-                    return;
-                }
-    
-                const formData = {
-                    name: name,
-                    gender: gender,
-                    bloodGroup: bloodGroup,
-                    packets: packets,
-                    hospital: hospital,
-                    fromKmit: fromKmit,
-                    phone: phone,
-                    phoneVerification: phoneVerification,
-                };
-    
-                // Display loading/spinner if needed
-    
-                // Trigger Netlify Function for form submission
-                fetch('/.netlify/functions/submitDonorform', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    alert(data.message);
-    
-                    // Display donor information if available
-if (data.donorData && data.donorData.length > 0) {
-    // Display donor information in the specified container
-    const donorInfoContainer = document.getElementById('donorInfoContainer');
-
-    // Create a table element
-    const table = document.createElement('table');
-    table.id = 'donorTable'; // Set an ID for styling
-    table.border = '1';
-
-    // Create a header row
-    const headerRow = table.insertRow(0);
-    const nameHeader = headerRow.insertCell(0);
-    const bloodGroupHeader = headerRow.insertCell(1);
-    const phoneHeader = headerRow.insertCell(2);
-    nameHeader.innerHTML = '<b>Name</b>';
-    bloodGroupHeader.innerHTML = '<b>Blood Group</b>';
-    phoneHeader.innerHTML = '<b>Phone</b>';
-
-    // Iterate through donor data and create rows
-    data.donorData.forEach((donor, index) => {
-        const row = table.insertRow(index + 1);
-        const nameCell = row.insertCell(0);
-        const bloodGroupCell = row.insertCell(1);
-        const phoneCell = row.insertCell(2);
-
-        // Set cell values
-        nameCell.innerHTML = donor.name;
-        bloodGroupCell.innerHTML = donor.bloodGroup;
-        phoneCell.innerHTML = donor.phone;
-    });
-
-    // Clear existing content and append the table
-    donorInfoContainer.innerHTML = '';
-    donorInfoContainer.appendChild(table);
-} else {
-    // Clear the donorInfoContainer if no donor data is available
-    document.getElementById('donorInfoContainer').innerHTML = '';
-}
-
-
-    
-                    // Additional handling if needed
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Internal Server Error');
-                });
-            }
-    
-            document.getElementById('recipient-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                submitForm();
-            });
-        });
-    </script>
     <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
@@ -270,8 +184,8 @@ if (data.donorData && data.donorData.length > 0) {
                     <h4 class="mb-4 text-white">Quick Links</h4>
                     <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
                     <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                    <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                    <a href="privacy.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                    <a href="t&c.html"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                     <a href="team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
                 </div>
             </div>
@@ -319,6 +233,9 @@ if (data.donorData && data.donorData.length > 0) {
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a> 
+
+    <script src="js/bloodneed.js"></script>
+
 </body>
 
 </html>
