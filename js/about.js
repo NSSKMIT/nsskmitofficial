@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <img src="${photoURL}" class="img-fluid rounded-top w-100" alt="${member.name}">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="${member.instagramLink}"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="${member.phoneLink}"><i class="fas fa-phone"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="tel:${member.phoneLink}"><i class="fas fa-phone"></i></a>
                             </div>
                         </div>
                         <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
