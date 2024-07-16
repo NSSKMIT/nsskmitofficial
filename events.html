@@ -32,108 +32,107 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
     </head>
-<style>
-    /* Basic CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Container for the form */
-  #form-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20%;
-  }
-  
-  /* Form styles */
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="file"],
-  select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  button[type="button"] {
-    background-color: #dc3545;
-  }
-  
-  button[type="button"]:hover {
-    background-color: #c82333;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 600px) {
-    #form-container {
-      padding: 15px;
-      margin-top: 100%;
+    <style>
+      /* Basic CSS Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-  
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Container for the form */
+    #form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin-top: 20%;
+    }
+
+    /* Title and Subtitle */
+    .section-title .sub h4 {
+        margin-bottom: 15px;
+        text-align: center;
+        color: #333;
+    }
+
+    /* Form styles */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
     input[type="text"],
     input[type="number"],
     input[type="file"],
     select {
-      padding: 8px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
     }
-  
-    button {
-      padding: 8px;
-    }
-  }
-  
 
-    
-</style>
-<body>
-    <script>
-        // Check login state
-        if (localStorage.getItem("loggedIn") !== "true") {
-          // Redirect to login page if not logged in
-          window.location.href = "login-page.html"; // Change this to your login page's URL
+    button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    button[type="button"] {
+        background-color: #dc3545;
+    }
+
+    button[type="button"]:hover {
+        background-color: #c82333;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+        #form-container {
+            padding: 15px;
+            margin-top: 100%;
         }
-      </script>
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        select {
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+        }
+    }
+
+    </style>
+<body>
+    
 
 
         <!-- Topbar Start 
@@ -189,12 +188,11 @@
         </div>
 -->
 
-
         <div id="form-container">
 
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub">
-                    <h4 class=" px-3 mb-0"><br>NSS Slogan: NOT ME BUT YOU</h4>
+                    <h4 class=" px-3 mb-0"><br> NOT ME BUT YOU</h4>
                 </div>
             </div>
 
@@ -221,5 +219,25 @@
             </form>
             <script src="js/events.js"></script>
             <script src="js/main.js"></script>
+
+            <button id="logout-button">Logout</button>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                // Check login state
+                if (localStorage.getItem("loggedIn") !== "true") {
+                  // Redirect to login page if not logged in
+                  window.location.href = "login-page.html";
+                }
+          
+                const logoutButton = document.getElementById("logout-button");
+                logoutButton.addEventListener("click", () => {
+                  // Clear the login state
+                  localStorage.removeItem("loggedIn");
+                  // Redirect to the login page
+                  window.location.href = "login-page.html";
+                });
+              });
+            </script>
+
 </body>
 </html>
