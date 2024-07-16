@@ -193,5 +193,24 @@
             
 
             <script src="js/nssauth.js"></script>
+
+            <button id="logout-button">Logout</button>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                // Check login state
+                if (localStorage.getItem("loggedIn") !== "true") {
+                  // Redirect to login page if not logged in
+                  window.location.href = "login.html";
+                }
+          
+                const logoutButton = document.getElementById("logout-button");
+                logoutButton.addEventListener("click", () => {
+                  // Clear the login state
+                  localStorage.removeItem("loggedIn");
+                  // Redirect to the login page
+                  window.location.href = "login.html";
+                });
+              });
+            </script>
 </body>
 </html>
