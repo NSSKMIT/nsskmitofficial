@@ -46,7 +46,7 @@ try {
                     <div class="service-content rounded-bottom bg-light p-4">
                         <div class="service-content-inner">
                             <h5 class="mb-4">${event.eventName}</h5>
-                            <a href="${event.reportLink}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                            <a href="${event.reportLink}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2" target="_blank">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -67,12 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 displayEvents(1); // Display events for the first page by default
 });
 
-// Function to navigate to different pages
-function navigateToPage(pageNumber) {
-// Update URL based on the page number
-const url = `service.html?page=${pageNumber}`;
-window.location.href = url;
-}
 
 function navigateToPage(pageNumber) {
     let url;
