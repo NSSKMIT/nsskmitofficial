@@ -30,17 +30,28 @@
     </head>
 
     <style>
-        body{
-            overflow-x: hidden;
-        }
 
-        ::-webkit-scrollbar {
+body {
+    overflow-x: hidden; 
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+::-webkit-scrollbar {
     display: none;
 }
 
 html {
     scrollbar-width: none;
 }
+
+
+.container, .element {
+    overflow: hidden; 
+}
+
 
         * {
             max-width: 100%;
