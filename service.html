@@ -35,41 +35,9 @@
             overflow-x: hidden; 
         }
 
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-
-* {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-.navbar, .navbar * {
-    overflow: visible !important;
-
-}
-
-.navbar {
-    position: relative; 
-}
-
-.navbar .dropdown-menu {
-    position: absolute; 
-    z-index: 1000; 
-    display: none;
-}
-
-.navbar .dropdown:hover .dropdown-menu {
-    display: block;
-}
-
         
-        
-        .navbar a {
-            display: inline-block; 
-        }
-                @media (min-width: 300px) and (max-width: 400px) {
+
+                @media (min-width: 300px) and (max-width: 600px) {
                     .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
                         max-width: auto; 
                         padding-right: var(--bs-gutter-x, 0.75rem);
@@ -77,6 +45,15 @@
                         margin-right: auto;
                         margin-left: auto;
                     }
+                    ::-webkit-scrollbar {
+                        display: none;
+                    }
+            
+            
+            * {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
                 }
             </style>
 
