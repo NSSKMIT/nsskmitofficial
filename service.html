@@ -30,57 +30,55 @@
     </head>
 
     <style>
-body {
-    overflow-x: hidden; 
-}
+        
+        body {
+            overflow-x: hidden; 
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
 
 * {
-    box-sizing: border-box; 
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+.navbar, .navbar * {
+    overflow: visible !important;
+
+}
+
+.navbar {
+    position: relative; 
+}
+
+.navbar .dropdown-menu {
+    position: absolute; 
+    z-index: 1000; 
     display: none;
 }
 
-html {
-    scrollbar-width: none;
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-.container, .element {
-    overflow: hidden; 
-}
-
-
-        * {
-            max-width: 100%;
-            overflow-x: hidden;
+        
+        
+        .navbar a {
+            display: inline-block; 
         }
-
-.navbar {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    z-index: 1000; 
-    overflow-x: auto; 
-    white-space: nowrap; 
-    background-color: #fff; 
-}
-
-
-.navbar a {
-    display: inline-block; 
-}
-        @media (min-width: 300px) and (max-width: 400px) {
-            .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-                max-width: auto; 
-                padding-right: var(--bs-gutter-x, 0.75rem);
-                padding-left: var(--bs-gutter-x, 0.75rem);
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
-    </style>
+                @media (min-width: 300px) and (max-width: 400px) {
+                    .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+                        max-width: auto; 
+                        padding-right: var(--bs-gutter-x, 0.75rem);
+                        padding-left: var(--bs-gutter-x, 0.75rem);
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                }
+            </style>
 
     <body>
 
