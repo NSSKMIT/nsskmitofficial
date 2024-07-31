@@ -1725,19 +1725,6 @@
 
 /* blood donor*/
 
-  .signup-container {
-    background-color: #ffe1e1;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 60%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
 .signup-container h2 {
     text-align: center;
     color: #db3434;
