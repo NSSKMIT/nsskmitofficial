@@ -28,7 +28,25 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
+<style>
+        body{
+            overflow-x: hidden;
+        }
 
+        * {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        @media (min-width: 300px) and (max-width: 400px) {
+            .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+                max-width: auto; /* Adjust as needed for your design */
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    </style>
     <body>
 
         <!-- Spinner Start -->
