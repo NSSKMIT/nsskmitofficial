@@ -28,16 +28,28 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 
-        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
     </head>
     <style>
+        @media (min-width: 300px) and (max-width: 400px) {
+            .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+                max-width: auto; /* Adjust as needed for your design */
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
       /* Basic CSS Reset */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     body {
@@ -47,6 +59,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow-x: hidden;
     }
 
     /* Container for the form */
