@@ -1,8 +1,7 @@
 [
   {
-    "origin": ["https://nsskmit.netlify.app"],
-    "method": ["GET", "HEAD"],
-    "maxAgeSeconds": 3600,
-    "responseHeader": ["Content-Type"]
+    "origin": ["*"],
+    "method": ["GET", "POST", "PUT", "DELETE"],
+    "maxAgeSeconds": 3600
   }
 ]
