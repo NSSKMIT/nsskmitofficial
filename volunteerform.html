@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Application Form</title>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -233,6 +234,8 @@
 </head>
 <body>
 
+  
+
   <div class="form-container" id="form">
     <header class="nss-header">
       <img src="https://firebasestorage.googleapis.com/v0/b/nssv-6458a.appspot.com/o/logos%2Fimages.png?alt=media&token=0d13bca0-66c3-4822-a64d-52d88428bf68" alt="Left Logo" class="logo">
@@ -315,6 +318,12 @@
   
       <label for="image">Upload Image:</label>
       <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+      <label>
+        Read the Terms and Conditions before Submitting the Form<br>
+        <a href="terms-and-conditions.html" target="_blank">terms and conditions</a>.
+    </label>
+    <br><br>
   
       <button type="button" id="submit-btn">Submit</button>
     </form>
@@ -397,14 +406,15 @@
 <script>
   // Initialize Firebase
   const firebaseConfig = {
-      apiKey: "AIzaSyBRKwMq9gFKXG0jL-abbKoPEnFgBUewoMY",
-      authDomain: "nssv-6458a.firebaseapp.com",
-      projectId: "nssv-6458a",
-      storageBucket: "nssv-6458a.appspot.com",
-      messagingSenderId: "33300853508",
-      appId: "1:33300853508:web:cc8030fc6d04963143d651",
-      measurementId: "G-QR4E3KB52C"
-  };
+  apiKey: "AIzaSyA3EoL7KzFhJusQrwSafMzacxGekAr1PO0",
+  authDomain: "volunteer-form-d2f40.firebaseapp.com",
+  databaseURL: "https://volunteer-form-d2f40-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "volunteer-form-d2f40",
+  storageBucket: "volunteer-form-d2f40.appspot.com",
+  messagingSenderId: "383168587222",
+  appId: "1:383168587222:web:a1f4fad2a5a14c8c2b7077",
+  measurementId: "G-YNBX5SG4XN"
+};
   
   firebase.initializeApp(firebaseConfig);
   
