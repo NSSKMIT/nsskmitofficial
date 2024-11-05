@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "nsskmitofficial@gmail.com" && password === "NSSKMIT") {
+    if (username === "nsskmitofficial@gmail.com" && password === "nsskmitnithin03") {
       alert("You have successfully logged in.");
       // Store login state in local storage
       localStorage.setItem("loggedIn", "true");
