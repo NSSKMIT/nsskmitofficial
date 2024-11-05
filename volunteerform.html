@@ -248,7 +248,7 @@
     </header>
   
     <form id="application-form">
-      <label for="name">1. Name of the Student (Full Name):</label>
+      <label for="name">1. Name of the Student (Full Name in CAPITALS):</label>
       <input type="text" id="name" name="name" placeholder="" required><br><br>
   
       <label for="sex">2. Gender:</label>
@@ -259,10 +259,10 @@
         <option value="others">Others</option>
       </select><br><br>
   
-      <label for="father-name">3. Father's Name:</label>
+      <label for="father-name">3. Father's Name (Full Name in CAPITALS):</label>
       <input type="text" id="father-name" name="father-name" placeholder="" required><br><br>
 
-      <label for="community">4. Mother's Name:</label>
+      <label for="community">4. Mother's Name (Full Name in CAPITALS):</label>
       <input type="text" id="community" community="community" placeholder="" required><br><br>
   
       <label for="address">5. Permanent Address:</label>
@@ -299,7 +299,7 @@
       <label for="email">10. Email ID:</label>
       <input type="email" id="email" name="email" placeholder="" required><br><br>
   
-      <label for="course-year">11. College Adm No:</label>
+      <label for="course-year">11. JNTU Roll Number: (Eg: 21BD*** in CAPITALS)</label>
       <input type="text" id="course-year" name="course-year" placeholder="" required><br><br>
   
       <label for="nss-volunteer">12. Were you a NSS Volunteer during your earlier courses:</label>
@@ -316,7 +316,7 @@
         <option value="No">No</option>
       </select><br><br>
   
-      <label for="image">Upload Image:</label>
+      <label for="image">Upload Image: (Passport size Photo Only)</label>
       <input type="file" id="image" name="image" accept="image/*" required><br><br>
 
       <label>
@@ -384,7 +384,7 @@
   <p><strong>8. Willing to Donate Blood:</strong> <span id="submitted-donate-blood"></span></p>
   <p><strong>9. Contact Number (Mobile):</strong> <span id="submitted-contact-mobile"></span></p>
   <p><strong>10. Email ID:</strong> <span id="submitted-email"></span></p>
-  <p><strong>11. College Adm No:</strong> <span id="submitted-course-year"></span></p>
+  <p><strong>11. JNTU Roll Number:</strong> <span id="submitted-course-year"></span></p>
   <p><strong>12. NSS Volunteer:</strong> <span id="submitted-nss-volunteer"></span></p>
   <p><strong>13. NCC Member:</strong> <span id="submitted-ncc-member"></span></p>
 
@@ -602,7 +602,7 @@ function addFormFields(doc, photoTopY) {
     { question: "8. Willing to donate blood?", answer: form['donate-blood'].value }, // New Field
     { question: "9. Contact Phone Number", answer: form['contact-mobile'].value },
     { question: "10. Email Address", answer: form['email'].value }, // New Field
-    { question: "11. College Adm No", answer: form['course-year'].value },
+    { question: "11. JNTU Roll Number:", answer: form['course-year'].value },
     { question: "12. Past NSS Volunteer", answer: form['nss-volunteer'].value },
     { question: "13. Member of NCC", answer: form['ncc-member'].value },
 ];
